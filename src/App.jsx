@@ -5,19 +5,24 @@ import "./App.css";
 function App() {
   const [isLogin, setIsLogin] = useState(false);
   const [showInvalidMsg, setShowInvalidMsg] = useState(false);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formData = new FormData(e.target);
+    // const formData = new FormData(e.target);
 
-    if (
-      formData.get("username") === "user" &&
-      formData.get("password") === "password"
-    ) {
-      setIsLogin(true);
-    } else {
-      setShowInvalidMsg(true);
-    }
+    // if (
+    //   formData.get("username") === "user" &&
+    //   formData.get("password") === "password"
+    // ) {
+    //   setIsLogin(true);
+    // } else {
+    //   setShowInvalidMsg(true);
+    // }
+
+    if (username === "user" && password === "password") setIsLogin(true);
+    else setShowInvalidMsg(true);
   };
 
   return (
@@ -33,7 +38,8 @@ function App() {
               <input
                 type="text"
                 id="username"
-                name="username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 autoComplete="off"
                 required
               />
@@ -45,7 +51,8 @@ function App() {
               <input
                 type="password"
                 id="password"
-                name="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 autoComplete="off"
                 required
               />
