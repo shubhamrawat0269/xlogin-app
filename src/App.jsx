@@ -33,11 +33,11 @@ function App() {
       {!isLogin ? (
         <form onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="username">
+            <label htmlFor="Username">
               Username:
               <input
                 type="text"
-                id="username"
+                id="Username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 autoComplete="off"
@@ -46,11 +46,11 @@ function App() {
             </label>
           </div>
           <div>
-            <label htmlFor="password">
+            <label htmlFor="Password">
               Password:
               <input
                 type="password"
-                id="password"
+                id="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 autoComplete="off"
