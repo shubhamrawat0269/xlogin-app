@@ -33,30 +33,26 @@ function App() {
       {!isLogin ? (
         <form onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="Username">
-              Username:
-              <input
-                type="text"
-                id="Username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                autoComplete="off"
-                required
-              />
-            </label>
+            <label htmlFor="Username">Username: </label>
+            <input
+              type="text"
+              id="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              autoComplete="off"
+              required
+            />
           </div>
           <div>
-            <label htmlFor="Password">
-              Password:
-              <input
-                type="password"
-                id="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                autoComplete="off"
-                required
-              />
-            </label>
+            <label htmlFor="Password">Password: </label>
+            <input
+              type="password"
+              id="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              autoComplete="off"
+              required
+            />
           </div>
           <div className="btns">
             <button type="submit">Submit</button>
